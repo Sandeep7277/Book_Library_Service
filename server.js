@@ -5,7 +5,7 @@ const app = require("./app");
 require("colors");
 
 //Connecting MongoDb with Express.Js
-const connectDatabase = require("./DB/dbConnection");
+const connectDatabase = require("./database/dbConnection");
 connectDatabase();
 
 console.log(process.env);

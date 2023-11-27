@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const bookRouter = require("./routes/booksRoutes");
 
 let app = express();
 
@@ -10,5 +11,8 @@ app.use((req, res, next) => {
   req.requestedAt = new Date().toISOString();
   next();
 });
+
+//Routes Endpoint
+app.use("/api/v1/books", bookRouter);
 
 module.exports = app;
