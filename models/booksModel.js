@@ -18,7 +18,7 @@ const bookSchema = new mongoose.Schema({
     trim: true,
   },
   edition: {
-    type: Number,
+    type: String,
     required: [true, "Edition is required field!"],
     trim: true,
   },
